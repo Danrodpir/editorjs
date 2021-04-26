@@ -3,6 +3,7 @@ import { default as React, useEffect, useRef } from 'react';
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header'; 
 import Timeline from './tools/timeline/tool';
+import ImageTool from '@editorjs/image';
 
 const DEFAULT_INITIAL_DATA = () => {
   return {
@@ -53,6 +54,15 @@ const Editor = (props) => {
       tools: { 
         header: Header, 
         timeline: Timeline,
+        image: {
+          class: ImageTool,
+          config: {
+            endpoints: {
+              byFile: 'http://localhost:8008/uploadFile', // Your backend file uploader endpoint
+              byUrl: 'http://localhost:8008/fetchUrl', // Your endpoint that provides uploading by Url
+            }
+          }
+        },
       }, 
     });
   };
