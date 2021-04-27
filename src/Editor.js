@@ -3,8 +3,7 @@ import { default as React, useEffect, useRef } from 'react';
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header'; 
 import Timeline from './tools/timeline/tool';
-
-const SimpleVideo = require('simple-video-editorjs');
+import Quote from '@editorjs/quote';
 
 const DEFAULT_INITIAL_DATA = () => {
   return {
@@ -55,7 +54,15 @@ const Editor = (props) => {
       tools: { 
         header: Header, 
         timeline: Timeline,
-        video: SimpleVideo,
+        quote: {
+          class: Quote,
+          inlineToolbar: true,
+          shortcut: 'CMD+SHIFT+O',
+          config: {
+            quotePlaceholder: 'Enter a quote',
+            captionPlaceholder: 'Quote\'s author',
+          },
+        },    
       }, 
     });
   };
