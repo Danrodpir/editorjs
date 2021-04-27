@@ -1,9 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { default as React, useEffect, useRef } from 'react';
+
+// Imports EditorJS y pluggins
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header'; 
 import Timeline from './tools/timeline/tool';
 import Quote from '@editorjs/quote';
+import List from '@editorjs/list';
+import ImageTool from '@editorjs/image';
+import Underline from '@editorjs/underline';
+import Checklist from '@editorjs/checklist';
+import SocialPost from 'editorjs-social-post-plugin';
+import Embed from '@editorjs/embed';
 
 const DEFAULT_INITIAL_DATA = () => {
   return {
@@ -54,6 +62,35 @@ const Editor = (props) => {
       tools: { 
         header: Header, 
         timeline: Timeline,
+        underline: Underline,
+        socialPost: SocialPost,
+        embed: {
+          class: Embed,
+          config: {
+            services: {
+              youtube: true,
+              coub: true
+            }
+          }
+        },
+      
+        list: {
+          class: List,
+          inlineToolbar: true,
+        },
+        checklist: {
+          class: Checklist,
+          inlineToolbar: true,
+        },
+        image: {
+          class: ImageTool,
+          config: {
+            endpoints: {
+              byFile: 'http://localhost:8008/uploadFile', // Your backend file uploader endpoint
+              byUrl: 'http://localhost:8008/fetchUrl', // Your endpoint that provides uploading by Url
+            }
+          }
+        },
         quote: {
           class: Quote,
           inlineToolbar: true,

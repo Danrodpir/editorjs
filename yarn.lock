@@ -1181,6 +1181,11 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-10.1.0.tgz#f0950bba18819512d42f7197e56c518aa491cf18"
   integrity sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
 
+"@editorjs/checklist@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@editorjs/checklist/-/checklist-1.3.0.tgz#98c08f0c6a8b62a2b1a0f181604c1a8c8edc15b1"
+  integrity sha512-087oW0oOIE5HX8llj4Eap/reFDFw8VCLlp6GU0E9GEp7f3zy2aV6KdFR+6dbYhZ50w7tSnkMpCAcSq1NXJeB4Q==
+
 "@editorjs/editorjs@^2.19.1":
   version "2.20.2"
   resolved "https://registry.yarnpkg.com/@editorjs/editorjs/-/editorjs-2.20.2.tgz#3933a2b2327df71579018f1c79336b4686d3400d"
@@ -1188,6 +1193,11 @@
   dependencies:
     codex-notifier "^1.1.2"
     codex-tooltip "^1.0.2"
+
+"@editorjs/embed@^2.4.5":
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/@editorjs/embed/-/embed-2.4.5.tgz#39e0864f76bd3834145b3d1bb65713f11354262a"
+  integrity sha512-ezlu6IzxKQmgR9pbXnLugp/dyvut/utMoEnXucXliombAb8xbHya1zP0x7jUuq+vfekH54ytNycLGjV/h+05ng==
 
 "@editorjs/header@^2.6.1":
   version "2.6.1"
@@ -1198,6 +1208,11 @@
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@editorjs/image/-/image-2.6.0.tgz#269d8dceebbb5fe667f9152188c425ba8b1c300f"
   integrity sha512-lX4Pz9cW3gGFzlmYLRAsBXTiqUG/MRG7NK4QVU+n/VnUWPU1e791eiIpgRLHfpPj6Maaw5a+GRut90D5EdXtqg==
+
+"@editorjs/list@^1.6.2":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@editorjs/list/-/list-1.6.2.tgz#38cb307d78ec8b6c55480c538805cdc2ff250ad1"
+  integrity sha512-OxowV0yuE11G01czYM1dEQlz1F37ehX0ak5vAbZ9ncSXrPh0fDRw/fBxTY654FlmrsQ40UFom3owSG++tLvVGw==
 
 "@editorjs/paragraph@^2.8.0":
   version "2.8.0"
@@ -1213,6 +1228,11 @@
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@editorjs/simple-image/-/simple-image-1.4.1.tgz#16a847e0f21041dfac0af8235d19b8a8a756c493"
   integrity sha512-8lqcMYKrxhnDNasqq4Id9/SwXymSofVb4SJBC7gQoJmNG9bfRgVEXLsEUnuLzn8ixkAYlK2oNTc7ioZdD8bEOw==
+
+"@editorjs/underline@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@editorjs/underline/-/underline-1.0.0.tgz#47e5e5fde7a3dd071bc9f4faed90b4f518b7e3db"
+  integrity sha512-2qbmr6/Y5ZIsfmJeAxLujCndc5wpIEQ2uxoPIdR3uHIUQhA6Q28U5HdoGpEZwsP1d7e/A/vBhN18Ugro0iA0MQ==
 
 "@emotion/hash@^0.8.0":
   version "0.8.0"
@@ -4414,6 +4434,13 @@ editorjs-button@^1.0.3:
   resolved "https://registry.yarnpkg.com/editorjs-button/-/editorjs-button-1.0.3.tgz#a9b2c0b419a9662e56dbbe0994bc678bb012a765"
   integrity sha512-4G3cwUYGd4ff+VUazzR7Zz9fX+H1ryENNOJsmMy2B241QPe/xElJP0FR9/LbnEFGUpx3JvdreqVcwWrvXJX5tg==
 
+editorjs-social-post-plugin@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/editorjs-social-post-plugin/-/editorjs-social-post-plugin-1.0.0.tgz#bcc22c335a43492ef5c8eee0731d9bed54418335"
+  integrity sha512-E+iJbMCfOfhVWvvZrtjHKzFo9QZl9DnxF0lxjMT8/KfELi7lWGK0ECuFsyJHePA3ll1N1T5iTKixOhJWTJ7cyQ==
+  dependencies:
+    fetch-jsonp "^1.1.3"
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
@@ -5099,6 +5126,11 @@ fb-watchman@^2.0.0:
   integrity sha512-DkPJKQeY6kKwmuMretBhr7G6Vodr7bFwDYTXIkfG1gjvNpaxBTQV3PbXg6bR1c1UP4jPOX0jHUbbHANL9vRjVg==
   dependencies:
     bser "2.1.1"
+
+fetch-jsonp@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/fetch-jsonp/-/fetch-jsonp-1.1.3.tgz#9eb9e585ba08aaf700563538d17bbebbcd5a3db2"
+  integrity sha1-nrnlhboIqvcAVjU40Xu+u81aPbI=
 
 figgy-pudding@^3.5.1:
   version "3.5.2"
