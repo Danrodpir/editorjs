@@ -126,6 +126,8 @@ const Editor = (props) => {
   // Permite usar los metodos del editor:
   const [editorConf, setConfEditor] = React.useState(undefined);
 
+  const [cont, setCont] = React.useState(0);
+
   // This will run only once
   useEffect(() => {
     if (!ejInstance.current) {
@@ -200,10 +202,11 @@ const Editor = (props) => {
   return (
     <React.Fragment>
       <div id={EDITTOR_HOLDER_ID}> </div>
-      <button onClick={ function() {
+      <button id={cont} onClick={ function() {
               editorConf.save().then(savedData => {
                 console.log(JSON.stringify(savedData, null, 4));
-              })
+              });
+              setCont(1);
       }}>Imprimir estructura</button>
     </React.Fragment>
   );
