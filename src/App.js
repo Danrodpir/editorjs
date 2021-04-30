@@ -11,7 +11,7 @@ function App() {
         <Box p={5}>
           <Box>
             <Typography variant="h6" component="span">
-              EditorJS With React
+              EditorJS con React para iTop
         </Typography>
           </Box>
           <Box
@@ -20,7 +20,7 @@ function App() {
               backgroundColor: '#ffffff',
               border: '1px solid #cccccc'
             }}>
-            <Editor />
+            <Editor />           
           </Box>
         </Box>
       </Container>
