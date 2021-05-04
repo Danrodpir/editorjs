@@ -14,19 +14,24 @@ export default class Button {
       }
 
     render(){
-        const rootNode = document.createElement('div');
-
-        ReactDOM.render(
-            (
-                <div className="myButton">
-                    <button onClick={this.sayHello} type="button">
-                    Boton
-                    </button>
-            </div>   
-            ), rootNode);
         
-        return rootNode;
     }
+
+    // Genera el boton con el evento sayHello
+    // render(){
+    //     const rootNode = document.createElement('div');
+
+    //     ReactDOM.render(
+    //         (
+    //             <div className="myButton">
+    //                 <button onClick={this.sayHello} type="button">
+    //                 Boton
+    //                 </button>
+    //             </div>   
+    //         ), rootNode);
+        
+    //     return rootNode;
+    // }
   
     save(){
       return {

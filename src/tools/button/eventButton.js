@@ -10,3 +10,8 @@ const DEFAULT_INITIAL_DATA = () => {
     ],
   }
 }
+
+const EventButton = (props) => {
+    const [linkData, setLinkData] = undefinded;
+    const [texrData, setTextData] = undefinded;
+}
