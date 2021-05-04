@@ -13,6 +13,7 @@ import Checklist from '@editorjs/checklist';
 import SocialPost from 'editorjs-social-post-plugin';
 import Embed from '@editorjs/embed';
 import Delimiter from '@editorjs/delimiter';
+import Button from './tools/button/tool'
 
 const editorContent = {
   "time": 1619782716489,
@@ -159,6 +160,7 @@ const Editor = (props) => {
         underline: Underline,
         socialPost: SocialPost,
         delimiter: Delimiter,
+        button: Button,
         embed: {
           class: Embed,
           config: {
