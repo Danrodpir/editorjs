@@ -9,29 +9,34 @@ export default class Button {
         };
       }
 
-      sayHello() {
-        console.log('Hello!');
-      }
-
-    render(){
-        
-    }
+      sayHello(name, link) {
+        console.log(`${link} ${name}`);
+      }    
 
     // Genera el boton con el evento sayHello
-    // render(){
-    //     const rootNode = document.createElement('div');
+    render(){
+        const rootNode = document.createElement('div');
 
-    //     ReactDOM.render(
-    //         (
-    //             <div className="myButton">
-    //                 <button onClick={this.sayHello} type="button">
-    //                 Boton
-    //                 </button>
-    //             </div>   
-    //         ), rootNode);
+        ReactDOM.render(
+              ( 
+                  <div className="dataButton">
+                      <input type="text" id="linkButton" placeholder="Enlace del boton" /><br/>
+                      <input type="text" id="nameButton" placeholder="Nombre del boton" /><br/>
+                      <button onClick={this.sayHello}>Clickme!</button>
+                  </div>
+              ), rootNode);
+
+        // ReactDOM.render(
+        //     (
+        //         <div className="myButton">
+        //             <button onClick={this.sayHello} type="button">
+        //             Boton
+        //             </button>
+        //         </div>   
+        //     ), rootNode);
         
-    //     return rootNode;
-    // }
+        return rootNode;
+    }
   
     save(){
       return {
