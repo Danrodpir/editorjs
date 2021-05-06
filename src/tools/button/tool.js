@@ -1,7 +1,9 @@
 import {default as React} from 'react';
 import ReactDOM from 'react-dom';
 
-export default class Button {
+export default class Button extends React.Component{
+    state = {}
+
     static get toolbox() {
         return {
           title: 'Button',
@@ -9,34 +11,82 @@ export default class Button {
         };
       }
 
-      sayHello(name, link) {
-        console.log(`${link} ${name}`);
-      }    
-
-    // Genera el boton con el evento sayHello
-    render(){
+      constructor(props) {
+        super(props);
+        this.state = {value: ''};
+    
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+    
+      handleChange(event) {
+        this.setState({value: event.target.value});
+      }
+    
+      handleSubmit(event) {
+        alert('A name was submitted: ' + this.state.value);
+        event.preventDefault();
+      }
+    
+      render() {
         const rootNode = document.createElement('div');
 
         ReactDOM.render(
-              ( 
-                  <div className="dataButton">
-                      <input type="text" id="linkButton" placeholder="Enlace del boton" /><br/>
-                      <input type="text" id="nameButton" placeholder="Nombre del boton" /><br/>
-                      <button onClick={this.sayHello}>Clickme!</button>
-                  </div>
-              ), rootNode);
+          (
+            <form onSubmit={this.handleSubmit}>
+            <label>
+              Name:
+              <input type="text" value={this.state.value} onChange={this.handleChange} />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
+          ), rootNode
+        );
 
-        // ReactDOM.render(
-        //     (
-        //         <div className="myButton">
-        //             <button onClick={this.sayHello} type="button">
-        //             Boton
-        //             </button>
-        //         </div>   
-        //     ), rootNode);
-        
         return rootNode;
-    }
+      }
+    
+
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {link: '', name: ''};
+    // }
+
+    // handleChange(event) {        
+    //     this.setState({
+    //       ...this.state,
+    //       [event.target.name]: event.target.value
+    //     });
+    // }
+
+    // sayHello() {
+    //   console.log(`${this.state.link} ${this.state.name}`);
+    // }
+
+    // // Genera el boton con el evento sayHello
+    // render(){
+    //     const rootNode = document.createElement('div');
+
+    //     ReactDOM.render(
+    //           ( 
+    //               <div className="dataButton">
+    //                   <input type="text" name="link" id="linkButton" placeholder="Enlace del boton" value={this.state.link} onChange={this.handleChange.bind(this)}/><br/>
+    //                   <input type="text" name="name" id="nameButton" placeholder="Nombre del boton" value={this.state.name} onChange={this.handleChange.bind(this)}/><br/>
+    //                   <button onClick={this.sayHello}>Clickme!</button>
+    //               </div>
+    //           ), rootNode);
+
+    //     // ReactDOM.render(
+    //     //     (
+    //     //         <div className="myButton">
+    //     //             <button onClick={this.sayHello} type="button">
+    //     //             Boton
+    //     //             </button>
+    //     //         </div>   
+    //     //     ), rootNode);
+        
+    //     return rootNode;
+    // }
   
     save(){
       return {
