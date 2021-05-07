@@ -26,6 +26,14 @@ const editorContent = {
           }
       },
       {
+        "type": "button",
+        "data": {
+            "linkURL": "123123",
+            "linkName": "eqweqwe",
+            "editing": false
+        }
+    },
+      {
           "type": "paragraph",
           "data": {
               "text": "Pruebas entre JS Vanilla y React"
