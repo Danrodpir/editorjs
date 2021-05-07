@@ -25,6 +25,7 @@ export const EventButton = ({ onDataChange, data }) => {
 	};
 
 	const saveData = () => {
+		console.log(editing);
 		setEditing(false);
 		onDataChange({ linkURL: linkData, linkName: textData, editing: false });
 	};
